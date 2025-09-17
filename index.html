@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ティファールの電気ケトル リコール対象判定システム【非公式】</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ティファールの電気ケトル<br>リコール対象判定システム<br>【非公式】</h1>
+
+      <div class="input-group">
+        <label for="productNumber">製品品番:</label>
+        <input type="text" id="productNumber" placeholder="例: KO4901JP" />
+        <div class="help-text">製品品番を入力してください</div>
+      </div>
+
+      <div class="input-group">
+        <label for="manufactureCode">4桁の番号 (製造時期):</label>
+        <input
+          type="text"
+          id="manufactureCode"
+          placeholder="例: 4221"
+          maxlength="4"
+        />
+        <div class="help-text">
+          4桁の製造時期番号を入力してください（週+年形式）
+        </div>
+      </div>
+
+      <button onclick="checkProduct()">判定する</button>
+
+      <div id="result"></div>
+
+      <div class="info-section">
+        <h3>製造時期の見方について</h3>
+        <p>
+          「4桁の番号」は、その製品の製造時期を示しています。4桁のうち左側の２桁が製造された週、右側の２桁が製造された年を表します。「4221～2522」の場合、2021年の42週目～22年の25週目に製造された製品です。
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>※ 本システムの製品情報は以下の公式ページから引用しています：</p>
+      <p>
+        <a href="https://www.t-fal.co.jp/news/250916-1/" target="_blank"
+          >T-fal公式サイト - 製品リコール情報</a
+        >
+      </p>
+      <p>最新の情報については、必ず公式ページをご確認ください。</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
